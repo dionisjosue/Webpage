@@ -1,0 +1,1 @@
+﻿CREATE LOGIN [Dionis2] WITH PASSWORD = 'V@rg2s'

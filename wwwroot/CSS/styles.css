@@ -1,0 +1,70 @@
+﻿
+.buy-thumbnail {
+    font-size:small;
+}
+    .buy-thumbnail li {
+        list-style: none;
+    }
+
+.form{
+    background-color:lightgray;
+    margin-bottom:8px;
+}
+.form input[type=submit]{
+    background-color: forestgreen;
+    color:white;
+    padding:4px;
+}
+.product-info{
+    border-style:solid;
+    border-width:1px;
+    padding:4px;
+    display:inline-block;
+    padding-left:5px;
+    margin-bottom:4px;
+    width:450px;
+    background-color:gray;
+}
+    .product-info img {
+        float: left;
+        margin: 4px 8px 4px 4px;
+        border: 1px solid black;
+        padding: 2px;
+        max-width: 150px;
+    }
+#loginToggle {
+    cursor: pointer;
+}
+.Login{
+    border:2px black inset;
+    padding: 5px;
+    background-color:lightgray;
+    display:inline-block;
+}
+    .Login label{
+        width: 150px;
+        display:inline-block;
+    }
+    .Login input{
+        width: 200px;
+    }
+    .Login input[type=submit], .Login input[type= checkbox]{
+        width:auto;
+    }
+   
+.menu li{
+    display:inline;
+} 
+
+.Shop-info{
+
+}
+.login_styles{
+
+    padding-top:20px;
+    padding-bottom: 20px;
+}
+   
+
+
+

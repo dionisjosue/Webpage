@@ -1,0 +1,63 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TypeScriptToolsVersion>2.3</TypeScriptToolsVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\TypeScript\file.ts" />
+    <Content Remove="wwwroot\TypeScript\Main.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ClientApp\app\Cart.Component.ts" />
+    <None Remove="ClientApp\app\Login\Login.Component.ts" />
+    <None Remove="ClientApp\app\SearchComponent.ts" />
+    <None Remove="ClientApp\app\SearchProducts\SearchProductComponent.ts" />
+    <None Remove="ClientApp\app\Shared\DataService.ts" />
+    <None Remove="ClientApp\app\Shared\Orders.ts" />
+    <None Remove="ClientApp\app\Shared\Products.ts" />
+    <None Remove="ClientApp\Checkout.ts" />
+    <None Remove="ClientApp\Shop.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="ClientApp\app\app.component.ts" />
+    <Content Include="ClientApp\app\app.module.ts" />
+    <Content Include="ClientApp\assets\.gitkeep" />
+    <Content Include="ClientApp\environments\environment.prod.ts" />
+    <Content Include="ClientApp\environments\environment.ts" />
+    <Content Include="ClientApp\index.html" />
+    <Content Include="ClientApp\main.ts" />
+    <Content Include="ClientApp\polyfills.ts" />
+    <Content Include="ClientApp\styles.css" />
+    <Content Include="ClientApp\typings.d.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="6.2.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="3.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.Dotnet" Version="2.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\app\Cart\Cart.Component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\Login\Login.Component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\SearchProducts\SearchProductComponent.ts" />
+    <TypeScriptCompile Include="ClientApp\app\Shared\DataService.ts" />
+    <TypeScriptCompile Include="ClientApp\app\Shared\Orders.ts" />
+    <TypeScriptCompile Include="ClientApp\app\Shared\products.ts" />
+    <TypeScriptCompile Include="ClientApp\app\Shop.Component.ts" />
+    <TypeScriptCompile Include="wwwroot\TypeScript\file.ts" />
+    <TypeScriptCompile Include="wwwroot\TypeScript\Main.ts" />
+  </ItemGroup>
+
+
+
+</Project>

@@ -1,0 +1,27 @@
+﻿<!--[(ngModel)] para extrar lo que escribe el usuario y asignarlo a una variable de componente-->
+<!--routerLink para navegar entre los diferentes componentes con el path que se predefinio en el app.module (modulo raiz)-->
+<!--to navigate back only put / in routerLink if you want to navigate back and goint to another path put /Path-->
+
+<div class="row">
+    <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
+        <div class="well">
+            <div *ngIf="errormessage">{{errormessage}}</div>
+            <form (submit)="OnLogin()" #Formlogin ="ngForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input name="username" class="form-control" type="text" [(ngModel)]="creds.username" #name="ngModel" required/>
+                    <div class="text-danger" *ngIf="name.invalid && name.touched && name.errors.required">The username is required!</div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input name="password" class="form-control" type="password"[(ngModel)]="creds.password" required #pass="ngModel" />
+                    <div class="text-danger" *ngIf="pass.invalid && pass.touched && pass.errors.required">The password is required!</div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success" [disabled] ="Formlogin.invalid">Login</button>
+                    <a routerLink="/Checkout" class="btn btn-default">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

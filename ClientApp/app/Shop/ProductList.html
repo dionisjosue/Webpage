@@ -1,0 +1,28 @@
+﻿<div class="row">
+    <div class="col-lg-4">
+        <Search [producto]="products"
+                [filterproduct]="products"
+                (ProductSearch)="OnFilterProducts($event)"></Search>
+    </div>
+</div>
+
+<div class="row">
+    <div *ngFor="let p of FiltereProducts">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="well well-sm" style="min-height:500px">
+                <img src="/img/{{p.artId}}.jpg" class="img-responsive" style="width: 100%; max-height:250px;" />
+                <h3>{{p.category}}--{{p.productId}}</h3>
+                <div class="caption">
+                    <ul class="buy-thumbnail text-left">
+                        <li><span>Price:</span> {{p.price |currency: "USD": true:'1.2-2'}}</li>
+                        <li>Artist: {{p.artist}}</li>
+                        <li>Title: {{p.title}}</li>
+                    </ul>
+                </div>
+                <div class="force-bottom">
+                    <button class="btn btn-primary" (click)="Addproduct(p)">Buy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

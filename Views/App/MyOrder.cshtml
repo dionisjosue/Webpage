@@ -1,0 +1,124 @@
+﻿@model IEnumerable<Order>
+@{
+    ViewBag.title = "Orders";
+}
+@section scripts{
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <link href="~/CSS/MyOrder.css" rel="stylesheet" />
+
+}
+
+
+
+<!--<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-lg-offset-3">
+            <table class="table table-bordered table-condensed table-responsive">
+                <tbody>
+                    <tr>
+                        <td>OrderDate</td>
+                        <td>ItemName</td>
+                        <td>Price</td>
+                        <td>Quantity</td>
+                        <td>Total</td>
+                    </tr>
+                </tbody>
+                @foreach (var O in Model)
+                {
+                    <tr>
+                        <td>@O.OrderDate.Year/@O.OrderDate.Month/@O.OrderDate.Day</td>
+
+                    </tr>
+                }
+            </table>
+
+        </div>
+    </div>
+</div>-->
+<div class="container" id="orders">
+    <div class="col-lg-6 col-lg-offset-3">
+        <div class="rTable">
+            <div class="rTableBody" id="columnames">
+                <div class="rTableRow">
+                    <div class="rTableCell">OrderDate</div>
+                    <div class="rTableCell">item - category - id</div>
+                    <div class="rTableCell">Price</div>
+                    <div class="rTableCell">Quantity</div>
+                    <div class="rTableCell">Total</div>
+                </div>
+            </div>
+            <div class="rTableBody">
+               @foreach(var o in Model) {
+                <div class="rTableRow">
+                    <div class="rTableCell">@o.OrderDate.Year/@o.OrderDate.Month/@o.OrderDate.Day</div>
+                    <div class="rTableCell">
+                        <div class="rTableBody">
+                            <ol>
+                                @foreach (var i in o.Items)
+                                {
+                                    <li>@i.Product.Category-@i.Product.ProductId</li>
+                                }
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="rTableCell">
+                        <div class="rTableBody">
+
+                                @foreach (var i in o.Items)
+                                {
+                                    <div>@i.UnitPrice</div>
+                                }
+                        </div>
+                    </div>
+                    <div class="rTableCell">
+                        <div class="rTableBody">
+                                @foreach (var i in o.Items)
+                                {
+                                    <div>@i.Quantity</div>
+                                }
+                        </div>
+                    </div>
+                    <div class="rTableCell">
+                        <div class="rTableBody">
+                                @foreach (var i in o.Items)
+                                {
+                                    <div>@i.Quantity</div>
+                                }
+                        </div>
+                    </div>
+                </div>
+               }
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--<div class="container">
+    <div class="col-lg-6 col-lg-offset-3">
+        <div class="rTable">
+            <div class="rTableBody">
+                <div class="rTableRow">
+                    <div class="rTableCell">OrderDate</div>
+                    <div class="rTableCell">ItemName</div>
+                    <div class="rTableCell">Price</div>
+                    <div class="rTableCell">Quantity</div>
+                    <div class="rTableCell">Total</div>
+                </div>
+            </div>
+            <div class="rTableBody">
+                @foreach (var o in Model)
+                {
+                    <div class="rTableRow">
+                        <div class="rTableCell">@o.OrderDate.Year/@o.OrderDate.Month/@o.OrderDate.Day</div>
+                        
+                        <div class="rTableCell"></div>
+
+                    </div>
+
+                }
+            </div>
+        </div>
+    </div>
+
+</div>-->

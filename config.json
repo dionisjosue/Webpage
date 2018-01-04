@@ -1,0 +1,21 @@
+﻿{
+  "ConnectionStrings": {
+    "BuyConnectionString": "Data Source=DESKTOP-475EQ9J\\SQLEXPRESS;Database=BuyWebDB;Trusted_Connection=true;MultipleActiveResultSets=true;"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning"
+
+    }
+  },
+
+  "Tokens": {
+    "Key": "jkljkjkiujki;jksdl;r;wejt",
+    "Issuer": "http://localhost:64603/",
+    "Audience": "users"
+
+  }
+
+
+}
